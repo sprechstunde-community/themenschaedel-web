@@ -9,12 +9,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Themenschaedel.Web.Data;
 
 namespace Themenschaedel.Web
 {
     public class Startup
     {
+        //This will be used to allow offen to see collected opt-in data
+        readonly string AllowSpecificOrigins = "_allowSpecificOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,9 +28,18 @@ namespace Themenschaedel.Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: AllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins("https://offen.atleris.com/",
+                            "https://atleris.com/");
+                    });
+            });
+
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +60,8 @@ namespace Themenschaedel.Web
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseCors(AllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {

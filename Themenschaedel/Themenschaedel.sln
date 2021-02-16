@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themenschaedel.Web", "Themenschaedel.Web\Themenschaedel.Web.csproj", "{F187CEC6-FC75-4DA0-BCF7-0CDFE4ED2C16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Themenschaedel.Web", "Themenschaedel.Web\Themenschaedel.Web.csproj", "{F187CEC6-FC75-4DA0-BCF7-0CDFE4ED2C16}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{AEA80DED-F3F3-401C-AB56-FA315C2B0B79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{80238FB0-E9A0-46FF-81F1-A9298D82E565}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themenschaedel.Components", "Themenschaedel.Libs\Themenschaedel.Components\Themenschaedel.Components.csproj", "{36AAC4FE-0308-4F2E-986E-0CFF2AFD834A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Themenschaedel.Components", "Themenschaedel.Libs\Themenschaedel.Components\Themenschaedel.Components.csproj", "{36AAC4FE-0308-4F2E-986E-0CFF2AFD834A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Themenschaedel.Shared", "Themenschaedel.Shared\Themenschaedel.Shared\Themenschaedel.Shared.csproj", "{1727A0AD-A205-4538-94CA-7ACA9EB6CA99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Themenschaedel.Shared", "Themenschaedel.Shared\Themenschaedel.Shared\Themenschaedel.Shared.csproj", "{1727A0AD-A205-4538-94CA-7ACA9EB6CA99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
