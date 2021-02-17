@@ -37,7 +37,6 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    overflow: hidden;
 
     &:before {
         position: absolute;
@@ -72,6 +71,8 @@ body {
     transition-duration: 0.2s;
     overflow-y: auto;
     overflow-x: hidden;
+
+    position: fixed;
 
     .logo {
         display: none;
@@ -215,14 +216,23 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    margin-left: 220px;
     flex-grow: 1;
 }
 
 .header {
+    overflow: visible;
     display: flex;
+    background-color: var(--theme-bg);
+    position: fixed;
+    width: -moz-available; /* For Mozzila */
+    width: -webkit-fill-available; /* For Chrome */
+    width: stretch; /* Unprefixed */
     align-items: center;
+    top: 0;
     flex-shrink: 0;
     padding: 30px;
+    z-index: 999;
 }
 
 .search-bar {
@@ -317,7 +327,8 @@ body {
     flex-direction: column;
     padding: 0 30px 30px;
     flex-grow: 1;
-    overflow: auto;
+    overflow: hidden;
+    padding-top: 94px;
 }
 
 .anim {
@@ -1172,6 +1183,7 @@ button.vjs-play-control.vjs-control.vjs-button {
 
     .sidebar {
         align-items: center;
+        position: fixed;
     }
 
     body {

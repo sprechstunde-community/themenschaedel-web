@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Themenschaedel.Web.Services;
+using Themenschaedel.Web.Services.Interfaces;
 
 namespace Themenschaedel.Web
 {
@@ -40,6 +42,13 @@ namespace Themenschaedel.Web
 
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            services.AddServerSideBlazor().AddCircuitOptions(options => { options.DetailedErrors = true; });
+
+            services.AddHttpClient<IData, ApiData>(client =>
+            {
+                client.BaseAddress = new Uri("http://api.themenschaedel.darlor.de/");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

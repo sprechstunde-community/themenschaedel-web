@@ -30,6 +30,18 @@
             <a class="dismiss">🗙</a>
         </div>*@
 
+    
+    <script src="/js/InfiniteScroll.js"></script>
+    <script>
+        window.ScrollList = {
+            Init: function (ele, ref) {
+                window.ScrollList.ifs = new InfiniteScroll(ele, ref);
+            },
+            RemoveListener: function () {
+                window.ScrollList.ifs.RemoveListener();
+            }
+        }
+    </script>
 
     <script src="_framework/blazor.server.js"></script>
 </body>

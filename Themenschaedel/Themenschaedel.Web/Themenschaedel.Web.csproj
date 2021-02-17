@@ -16,10 +16,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Themenschaedel.Libs\Themenschaedel.Components\Themenschaedel.Components.csproj" />
+    <ProjectReference Include="..\Themenschaedel.Shared\Themenschaedel.Shared\Themenschaedel.Shared.csproj" />
   </ItemGroup>
 
 </Project>

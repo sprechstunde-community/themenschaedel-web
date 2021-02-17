@@ -31,8 +31,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  overflow: hidden; }
+  width: 100%; }
   body:before {
     position: absolute;
     left: 0;
@@ -62,7 +61,8 @@ body {
   flex-shrink: 0;
   transition-duration: 0.2s;
   overflow-y: auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: fixed; }
   .sidebar .logo {
     display: none;
     width: 30px;
@@ -155,13 +155,25 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  margin-left: 220px;
   flex-grow: 1; }
 
 .header {
+  overflow: visible;
   display: flex;
+  background-color: var(--theme-bg);
+  position: fixed;
+  width: -moz-available;
+  /* For Mozzila */
+  width: -webkit-fill-available;
+  /* For Chrome */
+  width: stretch;
+  /* Unprefixed */
   align-items: center;
+  top: 0;
   flex-shrink: 0;
-  padding: 30px; }
+  padding: 30px;
+  z-index: 999; }
 
 .search-bar {
   height: 34px;
@@ -236,7 +248,8 @@ body {
   flex-direction: column;
   padding: 0 30px 30px;
   flex-grow: 1;
-  overflow: auto; }
+  overflow: hidden;
+  padding-top: 94px; }
 
 .anim {
   animation: bottom 0.8s var(--delay) both; }
@@ -866,7 +879,8 @@ button.vjs-play-control.vjs-control.vjs-button {
   .sidebar.collapse {
     width: 40px; }
   .sidebar {
-    align-items: center; }
+    align-items: center;
+    position: fixed; }
   body {
     padding: 0; }
   .container {
