@@ -7,11 +7,17 @@ This repo contains materials from third parties, supplied under the following li
 	-	[MIT] Copyright (c) 2021 by Aysenur Turk (https://codepen.io/TurkAysenur/pen/LYRKpWe)
 	-	[MIT] Copyright © Nicolas Gallagher and Jonathan Neal (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
 	-	[MIT] Copyright (c) 2019 Shashikant Rudrawadi (https://github.com/wisne/InfiniteScroll-BlazorServer)
+	-	[MIT] Copyright (c) .NET Foundation and Contributors (https://github.com/Humanizr/Humanizer/blob/master/LICENSE)
+		-	[MIT] Copyright (c) 2013 Scott Kirkland (https://github.com/srkirkland/Inflector)
+		-	[MIT] Copyright (c) 2013-2014 Omar Khudeira (http://omar.io)
 
 
 Copyright (c) 2021 by Aysenur Turk (https://codepen.io/TurkAysenur/pen/LYRKpWe)
 Copyright © Nicolas Gallagher and Jonathan Neal (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
 Copyright (c) 2019 Shashikant Rudrawadi (https://github.com/wisne/InfiniteScroll-BlazorServer)
+Copyright (c) .NET Foundation and Contributors (https://github.com/Humanizr/Humanizer/blob/master/LICENSE)
+Copyright (c) 2013 Scott Kirkland (https://github.com/srkirkland/Inflector)
+Copyright (c) 2013-2014 Omar Khudeira (http://omar.io)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
