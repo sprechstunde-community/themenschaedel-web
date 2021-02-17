@@ -6,12 +6,12 @@ Do Not Translate or Localize
 This repo contains materials from third parties, supplied under the following licenses:
 	-	[MIT] Copyright (c) 2021 by Aysenur Turk (https://codepen.io/TurkAysenur/pen/LYRKpWe)
 	-	[MIT] Copyright © Nicolas Gallagher and Jonathan Neal (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
-	-	[MIT] Copyright (c) 2019 Shashikant Rudrawadi
+	-	[MIT] Copyright (c) 2019 Shashikant Rudrawadi (https://github.com/wisne/InfiniteScroll-BlazorServer)
 
 
 Copyright (c) 2021 by Aysenur Turk (https://codepen.io/TurkAysenur/pen/LYRKpWe)
 Copyright © Nicolas Gallagher and Jonathan Neal (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
-Copyright (c) 2019 Shashikant Rudrawadi
+Copyright (c) 2019 Shashikant Rudrawadi (https://github.com/wisne/InfiniteScroll-BlazorServer)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
