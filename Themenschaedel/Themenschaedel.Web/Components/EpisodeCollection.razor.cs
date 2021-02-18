@@ -26,6 +26,8 @@ namespace Themenschaedel.Components
 
         public List<Episode> Episodes { get; set; } = new List<Episode>();
 
+        Random random = new Random();
+
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             if (firstRender)
@@ -54,7 +56,22 @@ namespace Themenschaedel.Components
                 GetEpisodeWorkaround ep = await Data.GetEpisodes(PageSize, PageNumber);
                 for (int j = 0; j < ep.data.Count; j++)
                 {
+                    ep.data[j].AnimationDelay = _cssDelay + j;
+
                     Episodes.Add(ep.data[j]);
+
+                    if (Episodes[Episodes.Count - 1].image == null || Episodes[Episodes.Count - 1].image == "")
+                    {
+                        Episodes[Episodes.Count - 1].image = "assets/WhiteThemenschaedel.png";
+                        if (random.Next(1, 10001) > 9995)
+                        {
+                            Episodes[Episodes.Count - 1].image = "assets/WhiteThemenschaedel3.png";
+                        }
+                        if (random.Next(1, 10001) > 9900)
+                        {
+                            Episodes[Episodes.Count - 1].image = "assets/WhiteThemenschaedel2.png";
+                        }
+                    }
                 }
 
                 PageNumber++;
@@ -65,7 +82,7 @@ namespace Themenschaedel.Components
 
 
                 //at the end of pages or results stop loading anymore
-                if (PageNumber == ep.meta.last_page)
+                if (PageNumber > ep.meta.last_page)
                 {
                     await StopListener();
                 }
@@ -90,19 +107,8 @@ namespace Themenschaedel.Components
 
         #region FrontEnd
 
-        private int _cssDelay = 4;
-        public int cssDelay
-        {
-            get
-            {
-                return ++_cssDelay;
-            }
-            set
-            {
-                _cssDelay = value;
-            }
-        }
-        public string cssDelayString => $"--delay: .{cssDelay}s";
+
+        private const int _cssDelay = 4;
 
         #endregion FrontEnd
     }

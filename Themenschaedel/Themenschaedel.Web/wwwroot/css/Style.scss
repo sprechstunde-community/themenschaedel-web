@@ -583,9 +583,13 @@ body {
     }
 
     &:hover {
-        video {
+        .thumbnail {
             transform: scale(1.6);
             transform-origin: center;
+
+            /*transform: scale(5);
+            transform: translateX(50);
+            transform-origin: bottom;*/
         }
 
         .video-time {
@@ -616,6 +620,16 @@ body {
             border-color: var(--video-bg);
         }
     }
+}
+
+.thumbnail {
+    max-width: 100%;
+    width: 100%;
+    min-width: 100%;
+    border-radius: 20px 20px 0 0;
+    display: block;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 video {

@@ -23,5 +23,12 @@ namespace Themenschaedel.Shared.Props
         public int upvotes { get; set; }
         public int downvotes { get; set; }
         public int flags { get; set; }
+
+
+        //Data not from the API
+        public string ThumbnailCSS { get; set; }
+        public string VideoCSS { get; set; }
+        public int AnimationDelay { get; set; }
+        public string AnimationDelayCSS => $"--delay: .{AnimationDelay.ToString()}s";
     }
 }

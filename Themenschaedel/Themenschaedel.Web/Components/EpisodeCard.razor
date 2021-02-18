@@ -1,4 +1,6 @@
-﻿<style>
+﻿@using Themenschaedel.Shared.Props
+@using Humanizer
+<style>
     .video {
         position: relative;
         background-color: var(--video-bg);
@@ -100,12 +102,10 @@
         }
 </style>
 
-<div class="video anim" style="--delay: .4s">
-    <div class="video-time">8 min</div>
+<div class="video anim" style="@item.AnimationDelayCSS">
+    <div class="video-time">@(item.duration/60)m</div>
     <div class="video-wrapper">
-        <video muted="">
-            <source src="" type="video/mp4">
-        </video>
+        <img class="thumbnail" src="@item.image" />
         <div class="author-img__wrapper video-author">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
                 <path d="M20 6L9 17l-5-5"></path>
@@ -114,10 +114,14 @@
         </div>
     </div>
     <div class="video-by">Andy William</div>
-    <div class="video-name">Basic how to ride your skateboard comfortly</div>
-    <div class="video-view">54K views<span class="seperate video-seperate"></span>1 week ago</div>
+    <div class="video-name">@((MarkupString)item.title)</div>
+    <div class="video-view">@item.published_at.Humanize().ToString()</div>
 </div>
 
 @code {
 
+    [Parameter]
+    public Episode item { get; set; }
+
+    protected const string cssThumbnailHover = "display: none;";
 }

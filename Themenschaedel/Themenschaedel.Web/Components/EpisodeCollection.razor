@@ -5,23 +5,7 @@
 <div class="videos">
     @foreach (Episode item in Episodes)
     {
-    <div class="video anim" style="@cssDelayString">
-        <div class="video-time">@(item.duration/60)m</div>
-        <div class="video-wrapper">
-            <video muted="">
-                <source src="" type="video/mp4">
-            </video>
-            <div class="author-img__wrapper video-author">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
-                    <path d="M20 6L9 17l-5-5"></path>
-                </svg>
-                <img class="author-img" src="">
-            </div>
-        </div>
-        <div class="video-by">Andy William</div>
-        <div class="video-name">@((MarkupString)item.title)</div>
-        <div class="video-view">@item.published_at.Humanize().ToString()</div>
-    </div>
+        <EpisodeCard item="@item"  />
     }
     
     @if (StopLoading)
