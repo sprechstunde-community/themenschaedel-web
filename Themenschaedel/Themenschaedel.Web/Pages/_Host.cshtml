@@ -1,8 +1,11 @@
 ﻿@page "/"
+@using Microsoft.Extensions.Configuration
 @namespace Themenschaedel.Web.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IConfiguration _configuration
 @{
     Layout = null;
+    string offenID = _configuration.GetValue<string>("Config:OffenUserID");
 }
 
 <!DOCTYPE html>
@@ -29,6 +32,8 @@
             <a href="" class="reload">Reload</a>
             <a class="dismiss">🗙</a>
         </div>*@
+
+    <script async src="https://offen.atleris.com/script.js" data-account-id="@offenID"></script>
 
     <script src="/js/InfiniteScroll.js"></script>
     <script>

@@ -71,7 +71,6 @@ body {
     transition-duration: 0.2s;
     overflow-y: auto;
     overflow-x: hidden;
-
     position: fixed;
 
     .logo {
@@ -539,6 +538,11 @@ body {
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+
+        &.skeleton {
+            min-height: 44px;
+            border-radius: 4px;
+        }
     }
 
     &-view {
@@ -546,6 +550,11 @@ body {
         padding: 12px 20px 20px;
         background-color: var(--video-bg);
         position: relative;
+
+        &.skeleton {
+            min-height: 13px;
+            border-radius: 4px;
+        }
     }
 
     &-by {
@@ -553,6 +562,11 @@ body {
         padding: 20px 20px 0px;
         display: inline-flex;
         position: relative;
+
+        &.skeleton {
+            min-height: 17px;
+            border-radius: 4px;
+        }
 
         &:before {
             content: "";
@@ -580,13 +594,17 @@ body {
         top: 10px;
         z-index: 1;
         right: 8px;
+
+        &.skeleton {
+            min-height: 13px;
+            border-radius: 4px;
+        }
     }
 
     &:hover {
         .thumbnail {
             transform: scale(1.6);
             transform-origin: center;
-
             /*transform: scale(5);
             transform: translateX(50);
             transform-origin: bottom;*/
@@ -614,6 +632,11 @@ body {
         transition: 0.4s;
         bottom: -25px;
 
+        &.skeleton {
+            min-height: 55px;
+            border-radius: 4px;
+        }
+
         svg {
             background-color: #0aa0f7;
             color: #fff;
@@ -630,6 +653,11 @@ body {
     display: block;
     cursor: pointer;
     transition: 0.4s;
+
+    &.skeleton {
+        min-height: 145px;
+        border-radius: 4px;
+    }
 }
 
 video {
@@ -639,6 +667,24 @@ video {
     display: block;
     cursor: pointer;
     transition: 0.4s;
+}
+
+// THE LOADING EFFECT
+.skeleton {
+    background-color: #e2e5e7;
+    // The shine that's going to move across the skeleton:
+    background-image: linear-gradient( 90deg, rgba(#fff, 0), rgba(#fff, 0.5), rgba(#fff, 0) );
+    background-size: 40px 100%; // width of the shine
+    background-repeat: no-repeat; // No need to repeat the shine effect
+    background-position: left -40px top 0; // Place shine on the left side, with offset on the left based on the width of the shine - see background-size
+    animation: shine 1s ease infinite; // increase animation time to see effect in 'slow-mo'
+}
+
+@keyframes shine {
+    to {
+        // Move shine from left to right, with offset on the right based on the width of the shine - see background-size
+        background-position: right -40px top 0;
+    }
 }
 
 .stream-area {

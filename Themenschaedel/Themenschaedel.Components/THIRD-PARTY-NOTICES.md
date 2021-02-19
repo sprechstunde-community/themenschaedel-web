@@ -4,22 +4,9 @@ THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
 Do Not Translate or Localize
 
 This repo contains materials from third parties, supplied under the following licenses:
-	-	[MIT] Copyright (c) 2021 by Aysenur Turk (https://codepen.io/TurkAysenur/pen/LYRKpWe)
-	-	[MIT] Copyright © Nicolas Gallagher and Jonathan Neal (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
-	-	[MIT] Copyright (c) 2019 Shashikant Rudrawadi (https://github.com/wisne/InfiniteScroll-BlazorServer)
-	-	[MIT] Copyright (c) .NET Foundation and Contributors (https://github.com/Humanizr/Humanizer/blob/master/LICENSE)
-		-	[MIT] Copyright (c) 2013 Scott Kirkland (https://github.com/srkirkland/Inflector)
-		-	[MIT] Copyright (c) 2013-2014 Omar Khudeira (http://omar.io)
-	-	[MIT] Copyright (c) 2021 by Håvard Brynjulfsen (https://codepen.io/havardob/pen/dyGGGzq)
 	-	[MIT] Copyright (c) 2021 by Aaron Iker (https://codepen.io/aaroniker/pen/ZEYoxEY)
 
-Copyright (c) 2021 by Aysenur Turk (https://codepen.io/TurkAysenur/pen/LYRKpWe)
-Copyright © Nicolas Gallagher and Jonathan Neal (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
-Copyright (c) 2019 Shashikant Rudrawadi (https://github.com/wisne/InfiniteScroll-BlazorServer)
-Copyright (c) .NET Foundation and Contributors (https://github.com/Humanizr/Humanizer/blob/master/LICENSE)
-Copyright (c) 2013 Scott Kirkland (https://github.com/srkirkland/Inflector)
-Copyright (c) 2013-2014 Omar Khudeira (http://omar.io)
-Copyright (c) 2021 by Håvard Brynjulfsen (https://codepen.io/havardob/pen/dyGGGzq)
+
 Copyright (c) 2021 by Aaron Iker (https://codepen.io/aaroniker/pen/ZEYoxEY)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

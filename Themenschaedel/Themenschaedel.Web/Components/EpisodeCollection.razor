@@ -7,24 +7,20 @@
     {
         <EpisodeCard item="@item"  />
     }
+
     
     @if (StopLoading)
     {
-        <div>
-            <h4>End Of List</h4>
-        </div>
     }
-    <div id="list-end" class="mt-5 mb-5 p-5">
-        <p></p>
-        @if (IsLoading)
-        {
-            <div class="d-flex justify-content-center">
-                <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-            </div>
-        }
-
+    @if (IsLoading)
+    {
+        <SkeletonCard />
+        <SkeletonCard />
+        <SkeletonCard />
+        <SkeletonCard />
+    }
+    <div id="list-end">
+        
     </div>
 
     @*<div class="video anim" style="--delay: .4s">
