@@ -195,5 +195,5 @@
     }
 </style>
 
-<input id="checkboxCheckbox" disabled="@IsDisabledString" type="checkbox" @onclick="OnClickAction" class="checkbox" checked="@IsCheckedString">
+<input id="checkboxCheckbox" type="checkbox" @onclick="OnClickAction" class="checkbox" @checked(IsChecked)>
 <label for="checkboxCheckbox">@Title</label>

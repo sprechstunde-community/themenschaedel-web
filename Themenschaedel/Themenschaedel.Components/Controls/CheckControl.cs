@@ -14,14 +14,9 @@ namespace Themenschaedel.Components.Controls
 
         [Parameter] public bool IsChecked { get; set; } = false;
 
-        [Parameter] public bool IsDisabled { get; set; } = false;
-
         [Parameter] public Action OnClickAction { get; set; } = null;
 
         [Parameter] public EventCallback<bool> OnClick { get; set; }
-
-        public string IsCheckedString => IsChecked ? "true" : "false";
-        public string IsDisabledString => IsDisabled ? "true" : "false";
 
         public CheckControl()
         {
