@@ -20,6 +20,7 @@ namespace Themenschaedel.Web
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseSentry("https://0cb090c1ae9647d89b4cfb243ccfb0c1@sentry.alyra.dev/3");
                     webBuilder.UseStartup<Startup>();
                 });
     }

@@ -1,20 +1,18 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Logging;
+using Themenschaedel.Components.Controls;
 
 namespace Themenschaedel.Web.Shared
 {
     public partial class NavbarBase : ComponentBase
     {
-        private readonly ILogger<NavbarBase> _logger;
+        [Inject] private ILogger<NavbarBase> _logger { get; set; }
 
-        public NavbarBase(ILogger<NavbarBase> logger)
-        {
-            _logger = logger;
-        }
+        public bool CheckedSentry = true;
         
         public void OnSentryClick()
         {
-            _logger.LogDebug("LEBUTTON!!!");
+            _logger.LogDebug($"LEBUTTON!!! {CheckedSentry}");
         }
     }
 }

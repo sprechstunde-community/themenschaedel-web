@@ -10,5 +10,6 @@ namespace Themenschaedel.Web.Services.Interfaces
     {
         Task<GetEpisodeWorkaround> GetEpisodes(int count, int page);
         Task<Episode> GetEpisode(int id);
+        Task<string> Login(string email, string password);
     }
 }

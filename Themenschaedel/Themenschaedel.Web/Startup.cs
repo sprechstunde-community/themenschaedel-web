@@ -35,8 +35,10 @@ namespace Themenschaedel.Web
                 options.AddPolicy(name: AllowSpecificOrigins,
                     builder =>
                     {
-                        builder.WithOrigins("https://offen.atleris.com/",
-                            "https://atleris.com/");
+                        builder.WithOrigins("https://plausible.alyra.dev/themenschaedel.alyra.dev/",
+                            "https://status.alyra.dev/",
+                            "https://atleris.com/",
+                            "https://alyra.dev/");
                     });
             });
 

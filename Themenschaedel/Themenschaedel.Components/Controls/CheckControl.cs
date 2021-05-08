@@ -13,16 +13,8 @@ namespace Themenschaedel.Components.Controls
         [Required] [Parameter] public string Title { get; set; }
 
         [Parameter] public bool IsChecked { get; set; } = false;
-
-        [Parameter] public Action OnClickAction { get; set; } = null;
-
+        
         [Parameter] public EventCallback<bool> OnClick { get; set; }
-
-        public CheckControl()
-        {
-            if (OnClickAction == null) OnClickAction = new Action(OnClickInternal);
-
-        }
 
         protected async void OnClickInternal()
         {

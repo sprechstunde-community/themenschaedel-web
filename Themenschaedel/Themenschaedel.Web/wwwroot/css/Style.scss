@@ -506,7 +506,7 @@ body {
 .videos {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
 
@@ -1266,4 +1266,19 @@ button.vjs-play-control.vjs-control.vjs-button {
 ::-webkit-scrollbar-thumb {
     background-color: rgb(21, 20, 26);
     border-radius: 10px;
+}
+
+/* https://stackoverflow.com/a/23530115 */
+label {
+    /* Other styling... */
+    text-align: right;
+    clear: both;
+    float:left;
+    margin-right:15px;
+}
+
+.quicksettings {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
 }

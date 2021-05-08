@@ -1,6 +1,52 @@
 ﻿@page "/Login"
-<h3>Login</h3>
+@using Themenschaedel.Web.Services.Interfaces
+@inject IJSRuntime JS;
+@layout EmptyLayout
 
-@code {
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="/css/login.css">
+
+
+<div id="container">
+  <div id="inviteContainer">
+    <div class="logoContainer"><img class="logo" src="/assets/Themenschaedel2.png"/><img class="text" src="/assets/Logo.png"/></div>
+    <div class="acceptContainer">
+      <form>
+        <h1>WELCOME BACK!</h1>
+        <div class="formContainer">
+          <div class="formDiv" style="transition-delay: 0.2s">
+            <p>EMAIL</p>
+            <input type="email" required=""/>
+          </div>
+          <div class="formDiv" style="transition-delay: 0.4s">
+            <p>PASSWSORD</p>
+            <input type="password" required=""/><a class="forgotPas" href="#">FORGOT YOUR PASSWORD?</a>
+          </div>
+          <div class="formDiv" style="transition-delay: 0.6s">
+            <button @onclick="LoginClick" class="acceptBtn" type="submit">Login</button><span class="register">Need an account?<a href="#">Register</a></span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+@code{
+
+  [Inject] private IData _apiData { get; set; }
+  
+  protected override async Task OnAfterRenderAsync(bool firstRender)
+  {
+    if (firstRender)
+    {
+      await JS.InvokeVoidAsync("loginAnimation");
+      await base.OnAfterRenderAsync(firstRender);
+    }
+  }
+
+  protected void LoginClick()
+  {
     
+  }
+
 }

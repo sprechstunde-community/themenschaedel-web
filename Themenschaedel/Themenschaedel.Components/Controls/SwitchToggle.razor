@@ -195,5 +195,12 @@
     }
 </style>
 
+<div>
+  <input id="switchCheckbox" type="checkbox" @onclick="changeEventArgs => Console.WriteLine(changeEventArgs.Detail)" class="switch" @checked(IsChecked)>
+  <label for="switchCheckbox">@Title</label>
+</div>
+
+@*
 <input id="switchCheckbox" type="checkbox" @onclick="OnClickAction" class="switch" @checked(IsChecked)>
 <label for="switchCheckbox">@Title</label>
+*@

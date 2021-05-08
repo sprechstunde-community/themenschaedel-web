@@ -12,6 +12,8 @@ This repo contains materials from third parties, supplied under the following li
 		-	[MIT] Copyright (c) 2013-2014 Omar Khudeira (http://omar.io)
 	-	[MIT] Copyright (c) 2021 by Håvard Brynjulfsen (https://codepen.io/havardob/pen/dyGGGzq)
 	-	[MIT] Copyright (c) 2021 by Aaron Iker (https://codepen.io/aaroniker/pen/ZEYoxEY)
+	
+	- [MIT] Copyright (c) 2021 by Gibbu (https://codepen.io/Gibbu/pen/qxRwRp)
 
 Copyright (c) 2021 by Aysenur Turk (https://codepen.io/TurkAysenur/pen/LYRKpWe)
 Copyright © Nicolas Gallagher and Jonathan Neal (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
@@ -21,6 +23,8 @@ Copyright (c) 2013 Scott Kirkland (https://github.com/srkirkland/Inflector)
 Copyright (c) 2013-2014 Omar Khudeira (http://omar.io)
 Copyright (c) 2021 by Håvard Brynjulfsen (https://codepen.io/havardob/pen/dyGGGzq)
 Copyright (c) 2021 by Aaron Iker (https://codepen.io/aaroniker/pen/ZEYoxEY)
+
+Copyright (c) 2021 by Gibbu (https://codepen.io/Gibbu/pen/qxRwRp)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

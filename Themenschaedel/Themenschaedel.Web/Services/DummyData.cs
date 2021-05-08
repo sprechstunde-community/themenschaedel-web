@@ -19,6 +19,11 @@ namespace Themenschaedel.Web.Services
             throw new NotImplementedException();
         }
 
+        public Task<string> Login(string email, string password)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<GetEpisodeWorkaround> GetEpisodes(int count, int page)
         {
             GetEpisodeWorkaround ep = new GetEpisodeWorkaround();
