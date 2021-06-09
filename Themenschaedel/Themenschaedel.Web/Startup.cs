@@ -49,7 +49,7 @@ namespace Themenschaedel.Web
 
             services.AddHttpClient<IData, ApiData>(client =>
             {
-                client.BaseAddress = new Uri("http://api.themenschaedel.darlor.de/");
+                client.BaseAddress = new Uri("https://api.schaedel.rocks/");
             });
         }
 

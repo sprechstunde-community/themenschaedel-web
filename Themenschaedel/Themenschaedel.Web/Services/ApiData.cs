@@ -27,7 +27,7 @@ namespace Themenschaedel.Web.Services
         {
             string csrf = "";
             
-            Uri uriExecution = new Uri("https://api.themenschaedel.darlor.de/sanctum/csrf-cookie");
+            Uri uriExecution = new Uri($"{_httpClient.BaseAddress}sanctum/csrf-cookie");
             CookieContainer cookies = new CookieContainer();
             
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uriExecution);
@@ -45,7 +45,7 @@ namespace Themenschaedel.Web.Services
                 }
             }
             
-            _httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", csrf); 
+            _httpClient.DefaultRequestHeaders.TryAddWithoutValidation("X-XSRF-TOKEN", csrf); 
         }
 
         public async Task<Episode> GetEpisode(int id)
@@ -72,7 +72,7 @@ namespace Themenschaedel.Web.Services
         {
             try
             {
-                var response = await _httpClient.GetAsync($"http://api.themenschaedel.darlor.de/episodes?page={page}&per_page={count}");
+                var response = await _httpClient.GetAsync($"{_httpClient.BaseAddress}episodes?page={page}&per_page={count}");
                 if (response.IsSuccessStatusCode)
                 {
                     string json = response.Content.ReadAsStringAsync().Result;
